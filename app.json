@@ -1,0 +1,23 @@
+{
+    "addons": [
+  
+    ],
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      }
+    ],
+    "description": "API for myment database",
+    "env": {
+    },
+    "formation": {
+      "web": {
+        "quantity": 1
+      }
+    },
+    "name": "myment-back",
+    "scripts": {
+    },
+    "stack": "container"
+  }
+  
