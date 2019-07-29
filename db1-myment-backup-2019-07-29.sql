@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.1.38-MariaDB, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.40-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: myment
 -- ------------------------------------------------------
--- Server version	10.1.38-MariaDB-0+deb9u1
+-- Server version	10.1.40-MariaDB-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -112,30 +112,6 @@ LOCK TABLES `gen_custom_items` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `log_in`
---
-
-DROP TABLE IF EXISTS `log_in`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `log_in` (
-  `Id` int(11) DEFAULT NULL,
-  `username` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `log_in`
---
-
-LOCK TABLES `log_in` WRITE;
-/*!40000 ALTER TABLE `log_in` DISABLE KEYS */;
-INSERT INTO `log_in` VALUES (1,NULL,NULL);
-/*!40000 ALTER TABLE `log_in` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `profile`
 --
 
@@ -144,14 +120,8 @@ DROP TABLE IF EXISTS `profile`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `profile` (
   `Id` int(11) DEFAULT NULL,
-  `username` varchar(255) DEFAULT NULL,
   `profile_photo` mediumtext,
-  `first_name` varchar(255) DEFAULT NULL,
-  `profile_info` varchar(255) DEFAULT NULL,
-  `ranking_position` int(11) DEFAULT NULL,
-  `ranking_points` int(11) DEFAULT NULL,
-  `number_moments` int(11) DEFAULT NULL,
-  `moment_points` int(11) DEFAULT NULL
+  `profile_info` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -173,7 +143,6 @@ DROP TABLE IF EXISTS `ranking`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ranking` (
   `Id` int(11) DEFAULT NULL,
-  `username` varchar(255) DEFAULT NULL,
   `points` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -201,9 +170,8 @@ CREATE TABLE `sign_up` (
   `username` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `location` varchar(255) DEFAULT NULL,
-  `travels` varchar(255) DEFAULT NULL,
-  `age` int(11) DEFAULT NULL
+  `createdAt` date DEFAULT NULL,
+  `updatedAT` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -213,7 +181,7 @@ CREATE TABLE `sign_up` (
 
 LOCK TABLES `sign_up` WRITE;
 /*!40000 ALTER TABLE `sign_up` DISABLE KEYS */;
-INSERT INTO `sign_up` VALUES (1,'Armando','de Canha','armandodc','010495','armandodecanha@gmail.com','Santa Cruz de Tenerife',NULL,24);
+INSERT INTO `sign_up` VALUES (1,'Armando','de Canha','armandodc','010495','armandodecanha@gmail.com',NULL,NULL);
 /*!40000 ALTER TABLE `sign_up` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -226,4 +194,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-22 16:36:06
+-- Dump completed on 2019-07-29 19:29:14

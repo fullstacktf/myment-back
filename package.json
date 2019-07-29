@@ -18,7 +18,6 @@
     "url": "https://github.com/fullstacktf/myment-back/issues"
   },
   "homepage": "https://github.com/fullstacktf/myment-back#readme",
- 
   "dependencies": {
     "express": "^4.17.1",
     "typescript": "^3.5.2",
