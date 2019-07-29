@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
-const Myment = db.define('myment', {
+const Myment = db.define('sign_up', {
   // Object of fields
   first_name: {
     type: Sequelize.STRING,
