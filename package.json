@@ -4,7 +4,7 @@
   "description": "This repo contain the back API for the web application myment.",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "mysqld && node app.js",
     "dev": "nodemon app.js"
   },
   "keywords": [],
