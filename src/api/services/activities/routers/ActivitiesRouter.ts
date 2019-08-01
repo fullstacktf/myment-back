@@ -9,7 +9,7 @@ const controller = new ActivitiesController(new ActivitiesMongoRepository());
 router.post('/', (req, res) => {
     controller.handleAddRequest(req.body)
     .then( data => res.json(data) )
-    .catch()
+    .catch() 
 });
 
 router.get('/get-movies',(req,res) => {
