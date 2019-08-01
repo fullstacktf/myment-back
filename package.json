@@ -1,16 +1,28 @@
 {
-  "name": "myment-back",
+  "name": "myment_back",
   "version": "1.0.0",
   "description": "This repo contain the back API for the web application myment.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "mysqld && node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "FuckingBosses",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstacktf/myment-back.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fullstacktf/myment-back/issues"
+  },
+  "homepage": "https://github.com/fullstacktf/myment-back#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mariadb": "^2.1.0",
+    "sequelize": "^5.10.3",
     "typescript": "^3.5.2"
   },
   "devDependencies": {
@@ -29,6 +41,7 @@
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
-    "ts-node": "^8.3.0"
+    "ts-node": "^8.3.0",
+    "nodemon": "^1.19.1"
   }
 }
