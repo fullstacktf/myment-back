@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 const Sequelize = require('sequelize');
 
 module.exports = new Sequelize('myment', 'root', '010495a', {
