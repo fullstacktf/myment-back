@@ -1,1 +1,0 @@
-{"version":3,"file":"allCORS.js","sourceRoot":"","sources":["../../../src/api/middleware/allCORS.ts"],"names":[],"mappings":";;AAAA,mBAAwB,GAAG,EAAE,GAAG,EAAE,IAAI;IAClC,GAAG,CAAC,MAAM,CAAC,6BAA6B,EAAE,GAAG,CAAC,CAAC;IAC/C,GAAG,CAAC,MAAM,CAAC,8BAA8B,EAAE,gDAAgD,CAAC,CAAC;IAC7F,IAAI,EAAE,CAAC;AACX,CAAC;AAJD,4BAIC"}

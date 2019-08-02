@@ -4,7 +4,7 @@ const router: Router = Router();
 
 
 router.post('/login', (req, res, next) => {
-    res.status(200);
+    res.send('Hello');
 });
 
 // router.post('/register', (req, res) => {

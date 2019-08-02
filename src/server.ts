@@ -12,7 +12,7 @@ import allCORS from './api/middleware/allCORS'
 
 //Add Middlewares
 app.use(allCORS);
-app.use(bodyParser)
+app.use(bodyParser.json())
 //app.use(handleErrors)
 
 //Add Routes
