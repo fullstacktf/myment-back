@@ -1,19 +1,15 @@
-import { Router } from 'express';
-import { usersController } from '../controllers/usersController';
-const router: Router = Router();
-
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const router = express_1.Router();
 router.post('/login', (req, res, next) => {
-    res.status(200);
 });
-
 // router.post('/register', (req, res) => {
 //     const userId = req.params.id;
 //     const user = users.find(user => user.id == userId);
 //     console.log(user);
 //     res.json(user);
 // });
-
 // router.post('/', (req, res) => {
 //     if (Object.keys(req.body).length <= 0) {
 //         res.status(400).send('Empty body?');
@@ -23,5 +19,5 @@ router.post('/login', (req, res, next) => {
 //         res.json(newUser);
 //     }
 // });
-
-export const usersRouter: Router = router;
+exports.usersRouter = router;
+//# sourceMappingURL=usersRouter.js.map

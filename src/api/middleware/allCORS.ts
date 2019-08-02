@@ -1,4 +1,6 @@
-export default function(req, res, next) {
+import { Request, Response, NextFunction } from "express";
+
+export default function(req: Request, res: Response, next: NextFunction) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
