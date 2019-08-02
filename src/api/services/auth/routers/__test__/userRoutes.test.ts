@@ -2,18 +2,18 @@ import {server}  from "../../../../../server";
 import  superRequest from "supertest";
 
 describe('UserRouters',()=>{
-
     const httpRequest = superRequest(server)
-    test('POST /login empty',  done =>{
+
+    test('POST /login empty',async  () =>{
         const mockUserData = {"":""}
-        const res =  httpRequest.post(`/users/login`)
+        
+        const res = await httpRequest.post(`/users/login`)
         .send(mockUserData)
         .set('Accept', 'application/json')
         .set('Origin', 'http://localhost:3000')
-        .then(res => {
-            expect(res.status).toBe(200);
-            done();
-        })
+        
+        expect(res.status).toBe(200);
+        expect(res.text).toBe('Helo')
 
     });
     // test('POST /login undefined',()=>{

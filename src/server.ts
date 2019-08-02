@@ -11,7 +11,7 @@ import handleErrors from './api/middleware/handleErrors';
 import allCORS from './api/middleware/allCORS'
 
 //Add Middlewares
-app.use(allCORS);
+//app.use(allCORS);
 app.use(bodyParser.json())
 //app.use(handleErrors)
 
