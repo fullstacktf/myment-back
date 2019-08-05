@@ -1,6 +1,6 @@
-FROM node:10-alpine
-
-LABEL Delirial elarcadeldelirio@gmail.com
+FROM node:10:alpine
+WORKDIR /usr/src/app
+COPY package*.json ./
 LABEL version="1.0"
 LABEL description="API backend for testing \
 and developed on Node+Express+Mongo. \
