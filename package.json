@@ -4,8 +4,8 @@
   "description": "This repo contain the back API for the web application myment.",
   "main": "index.js",
   "scripts": {
-    "start": "sh init-database.sh && node app.js",
-    "dev": "nodemon app.ts"
+    "start": "node index.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "FuckingBosses",
