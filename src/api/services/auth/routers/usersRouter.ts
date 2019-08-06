@@ -7,12 +7,11 @@ router.post('/login', (req, res, next) => {
     res.send('Hello');
 });
 
-// router.post('/register', (req, res) => {
-//     const userId = req.params.id;
-//     const user = users.find(user => user.id == userId);
-//     console.log(user);
-//     res.json(user);
-// });
+router.post('/register', (req, res) => {
+    const userId = req.params.id;
+    const users = req.body
+    res.json(users);
+});
 
 // router.post('/', (req, res) => {
 //     if (Object.keys(req.body).length <= 0) {

@@ -5,7 +5,7 @@ import  superRequest from "supertest";
 describe('ActivitiesRouter',()=>{
     const httpRequest = superRequest(server)
 
-    test('POST / empty',async  () =>{
+    test('POST / empty',async  (done) =>{
         const mockUserData = {"":""}
         
         const res = await httpRequest.post(`/users/login`)
