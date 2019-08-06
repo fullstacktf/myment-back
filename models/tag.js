@@ -28,7 +28,7 @@ const TagSchema = new Schema({
 
 // Create Model
 const Tag = mongoose.model("tag", TagSchema); // The Tag model represent the tag collection
-// We want our objects within this collection to be structured based on this NinjaSchema
+// We want our objects within this collection to be structured based on this TagSchema
 // Mongoose pluralize tag for us, creates a collection called "tags"
 
 module.exports = Tag;
