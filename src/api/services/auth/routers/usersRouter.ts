@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { usersController } from '../controllers/usersController';
+import { usersController as controller } from '../controllers/usersController';
 const router: Router = Router();
 
 
@@ -22,5 +22,11 @@ router.post('/register', (req, res) => {
 //         res.json(newUser);
 //     }
 // });
+
+router.post('/delete',(req,res) => {
+    controller.handleRequest(req.body)
+    .then( data => res.json(data) )
+    .catch()
+})
 
 export const usersRouter: Router = router;
