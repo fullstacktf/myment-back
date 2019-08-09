@@ -11,8 +11,6 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:prettier/recommended",
-        "plugin:@typescript-eslint/recommended",
         "plugin:jest/recommended"
     ],
     "globals": {
@@ -20,7 +18,9 @@
         "SharedArrayBuffer": "readonly"
     },
     "plugins": [
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": "error"
     }
 }
