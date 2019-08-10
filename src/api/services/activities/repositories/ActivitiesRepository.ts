@@ -8,7 +8,7 @@ export class ActivitiesMongoRepository {
     private model = Activity;
     
     public constructor() {
-        this.con = new SingleMongo('127.0.0.1', 'activities');
+        this.con = new SingleMongo('127.0.0.1','wizard','1234','myment');
         this.con.connection.on('error', console.error.bind(console, 'connection error:'));
         this.con.connection.once('open', function() {
             console.log('We are connected');
@@ -18,8 +18,8 @@ export class ActivitiesMongoRepository {
         return await this.con.connection;
     }
     
-    public async showAll() {
-        return await this.model.find().limit(10);
+    public async getAll() {
+        return await this.model.find({}).limit(10);
     }
     
     public async addActivities(data:IdeaDTO){
@@ -40,7 +40,7 @@ export class ActivitiesMongoRepository {
     public async deleteActivities(data: IdeaDTO) {
         throw new Error("Method not implemented.");
     }
-    public async findBy(type: string, data: IdeaDTO) {
-        throw new Error("Method not implemented.");
+    public async findBy(tiping: string) {
+        return await this.model.findOne({type:tiping});
     }
 }

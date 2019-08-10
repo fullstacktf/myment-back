@@ -1,14 +1,10 @@
 db.createUser({
-  user: '${MONGO_INITDB_ROOT_USERNAME}',
-  pwd: '${MONGO_INITDB_ROOT_PASSWORD}',
-  roles: [
-    {
-      role: 'readWrite',
-      db: 'MONGO_INITDB_DATABASE',
-    },
-  ],
+  user: 'wizard',
+  pwd: '1234',
+  roles: [{ role: 'readWrite', db: 'myment' }],
 });
-db = db.getSiblingDB('activities');
+db = db.getSiblingDB('myment');
+db.createCollection('activities');
 db.activities.insertMany([
   {
     lodging: {
@@ -91,7 +87,7 @@ db.activities.insertMany([
     },
   },
 ]);
-db = db.getSiblingDB('locations');
+db.createCollection('locations');
 
 db.locations.insertMany([
   {
@@ -259,7 +255,7 @@ db.locations.insertMany([
     ],
   },
 ]);
-db = db.getSiblingDB('tags');
+db.createCollection('tags');
 db.tags.insertMany([
   {
     name: 'Bonito',

@@ -18,4 +18,4 @@ ActivitySchema.methods.searchNear = function():string[]{
     return this.name
   }
 
-export const Activity: Model<ActivityModel> = model<ActivityModel>('movies', ActivitySchema);
+export const Activity: Model<ActivityModel> = model<ActivityModel>('activities', ActivitySchema);

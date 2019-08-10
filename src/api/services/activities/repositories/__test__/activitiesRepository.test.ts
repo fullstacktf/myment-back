@@ -1,7 +1,7 @@
-import { MovieRepository } from '../../../../repo/activitiesRepository';
+import { ActivitiesMongoRepository as ActivitiesRepository } from '../ActivitiesRepository';
 
-describe('MovieRepository', () => {
-    const repo = new MovieRepository();
+describe('ActivitiesRepository', () => {
+    const repo = new ActivitiesRepository();
 
     describe('getConnectionState', () => {
         test('Check connection to database', () => {
@@ -10,11 +10,16 @@ describe('MovieRepository', () => {
             });
         });
     });
-    describe('showMovies', () => {
-        test('should return json', () => {
-            return repo.showMovies().then(data => {
-                expect(data).toMatchSnapshot();
+    describe('showActivities', () => {
+        test('should return all activities', () => {
+            return repo.getAll().then(data => {
+                expect(data).toBe('');
             });
         });
+        test('should return only food',() => {
+            return repo.findBy('food').then(data =>{
+                expect(data).toBe('');
+            });
+        })
     });
 });
