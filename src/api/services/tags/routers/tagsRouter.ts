@@ -1,8 +1,7 @@
 import { Router } from 'express';
-const router: Router = Router();
 import {TagsController} from '../controllers/tagsController'
 import { TagsRepository } from '../repositories/tagsRepository';
-
+const router: Router = Router();
 const controller = new TagsController(new TagsRepository)
 
 // Set the home page route
@@ -13,14 +12,14 @@ router.get('/', (req, res) => {
 
 // Get a list of tags from de db
 router.get('/tags', (req, res) => {
-    controller.showAll()
-    .then(tags => res.send(tags))
-    .catch( err => res.status(500))
+    controller.handleRequest(req.body)
+    .then(tags => res.json(tags))
+    .catch( err => res.json({"error":"No data available"}))
 });
 
 // Add a new tag to the db
 router.post('/tags', (req, res, next) => {
-  Tag.create(req.body)
+  controller.handleAddRequest(req.body)
     .then(tag => res.send(tag))
     .catch(next);
 });

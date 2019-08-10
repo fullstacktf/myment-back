@@ -40,9 +40,6 @@ export class ActivitiesController {
         const data = this.parseInput(req);
         return this.repo.findBy(type,data);
     }
-    public async showActivities() {
-        return await this.repo.showAll();
-    }
     public async handleLikeRequest(req: Request) {
         throw new Error("Method not implemented.");
     }
