@@ -1,4 +1,4 @@
-// Tag model
+// GeoSchema model
 const mongoose = require('mongoose');
 
 // Variable to store our Schema class in
@@ -16,18 +16,10 @@ const GeoSchema = new Schema({
   },
 });
 
-// Create tag Schema
-const TagSchema = new Schema({
-  tag: {
-    type: String,
-    required: [true, 'tag field is required'],
-  },
-});
-
 // Create Model
-const Tag = mongoose.model('tag', TagSchema); // The Tag model represent the tag collection
+const Geo = mongoose.model('tag', GeoSchema); // The GeoSchema model represent the tag collection
 // We want our objects within this collection to be structured based on this TagSchema
 // Mongoose pluralize tag for us, creates a collection called "tags"
 
-module.exports = Tag;
+module.exports = Geo;
 // Export this model

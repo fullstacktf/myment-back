@@ -1,3 +1,13 @@
-export function dice(steps: number): number {
-    return Math.floor(Math.random() * steps + 1);
+import { response } from "express";
+import {TagsRepository} from '../repositories/tagsRepository'
+
+export class TagsController{
+    private repo: TagsRepository;
+    
+    constructor(repo : TagsRepository){
+        this.repo = repo;
+    }
+    public async showAll(){
+        return this.repo.showAll();
+    }
 }
