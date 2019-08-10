@@ -35,7 +35,22 @@ export class TagsRepository{
     public async deleteTag(data: TagDTO) {
         throw new Error("Method not implemented.");
     }
-    public async findBy(type: string, data: TagDTO) {
-        throw new Error("Method not implemented.");
+    public async findBy(type: string, data: TagDTO) {        
+        // Partial text search using mongoDB regex
+        this.model.find(
+            {
+            storeName: {
+                $regex: new RegExp(q),
+            },
+            },
+            {
+                _id: 0,
+                __v: 0,
+            },
+            function(err, data) {
+                res.json(data);
+            },
+        )
+        .limit(10);
     }
 }
