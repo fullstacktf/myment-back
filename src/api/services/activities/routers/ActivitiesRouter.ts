@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
     .catch() 
 });
 
-router.get('/get-movies',(req,res) => {
+router.get('/getAll',(req,res) => {
     controller.handleRequest(req.body)
     .then( data => res.json(data) )
     .catch()

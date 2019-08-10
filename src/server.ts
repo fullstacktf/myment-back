@@ -16,8 +16,8 @@ app.use(bodyParser.json())
 //app.use(handleErrors)
 
 //Add Routes
-app.use('/users', usersRouter);
-//app.use('/activities', ActivitiesRouter);
+//app.use('/users', usersRouter);
+app.use('/activities', ActivitiesRouter);
 //app.use('/tags', TagsRouter);
 
 /*

@@ -8,7 +8,7 @@ describe('ActivitiesRouter',()=>{
     test('POST / empty',async  (done) =>{
         const mockUserData = {"":""}
         
-        const res = await httpRequest.post(`/users/login`)
+        const res = await httpRequest.post(`/activities/getAll`)
         .send(mockUserData)
         .set('Accept', 'application/json')
         .set('Origin', 'http://localhost:3000')

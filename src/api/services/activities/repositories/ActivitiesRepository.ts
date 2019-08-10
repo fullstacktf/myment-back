@@ -1,6 +1,6 @@
 import { Activity } from '../../../data/mongodb/ActivityModel';
 import { SingleMongo } from '../../../data/mongodb/initMongo';
-import { ActivityDTO } from 'ActivityDTO';
+import { IdeaDTO } from 'IdeaDTO';
 
 export class ActivitiesMongoRepository {
     
@@ -8,7 +8,7 @@ export class ActivitiesMongoRepository {
     private model = Activity;
     
     public constructor() {
-        this.con = new SingleMongo('127.0.0.1', 'movies');
+        this.con = new SingleMongo('127.0.0.1', 'activities');
         this.con.connection.on('error', console.error.bind(console, 'connection error:'));
         this.con.connection.once('open', function() {
             console.log('We are connected');
@@ -19,18 +19,17 @@ export class ActivitiesMongoRepository {
     }
     
     public async showAll() {
-        //TODO: put Limits
-        return await this.model.find();
+        return await this.model.find().limit(10);
     }
     
-    public async addActivities(data:ActivityDTO){
+    public async addActivities(data:IdeaDTO){
         //Check if exist
         if(await this.model.exists(data))
         return {error:'Data yet exist'}
         
         return await this.model.create(data)
     }
-    public async updateActivity(data: ActivityDTO) {
+    public async updateActivity(data: IdeaDTO) {
         //Check if exist
         if(await this.model.exists(data))
         return {error:'Data yet exist'}
@@ -38,10 +37,10 @@ export class ActivitiesMongoRepository {
         
         throw new Error("Method not implemented.");
     }
-    public async deleteActivities(data: ActivityDTO) {
+    public async deleteActivities(data: IdeaDTO) {
         throw new Error("Method not implemented.");
     }
-    public async findBy(type: string, data: ActivityDTO) {
+    public async findBy(type: string, data: IdeaDTO) {
         throw new Error("Method not implemented.");
     }
 }

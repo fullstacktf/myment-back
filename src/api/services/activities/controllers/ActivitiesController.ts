@@ -1,5 +1,5 @@
 import { ActivitiesMongoRepository as ActivitiesRepository } from '../repositories/ActivitiesRepository';
-import { ActivityDTO } from 'ActivityDTO';
+import { IdeaDTO } from 'IdeaDTO';
 import { Request } from 'express'
 //TODO: Add the express types to handle req and req 
 export class ActivitiesController {
@@ -9,7 +9,7 @@ export class ActivitiesController {
         this.repo = repo;
     }
     
-    private parseInput(data: any): ActivityDTO {
+    private parseInput(data: any): IdeaDTO {
         return {
             title: data.title,
             year: data.year,

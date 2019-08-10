@@ -1,18 +1,21 @@
 import { Document, Model, model, Schema } from 'mongoose';
-import { ActivityDTO } from '../../../types/ActivityDTO';
+import { IdeaDTO } from '../../../types/IdeaDTO';
 
-export interface ActivityModel extends ActivityDTO, Document {
-    getTitleAndYear(): string;
+export interface ActivityModel extends IdeaDTO, Document {
+    searchNear(): string[]
 }
 export const ActivitySchema: Schema = new Schema({
-    title: String,
-    year: Number,
-    genre: [String],
-    duration: Number,
+    location: Schema.Types.Mixed,
+    name: String,
+    description: String,
+    coordinates: Schema.Types.Mixed,
+    startTime:  [Number],
+    endTime: [Number],
+    link: String
 });
 
-ActivitySchema.methods.getTitleAndYear = function(): string {
-    return this.title + ' ' + this.duration;
-};
+ActivitySchema.methods.searchNear = function():string[]{
+    return this.name
+  }
 
 export const Activity: Model<ActivityModel> = model<ActivityModel>('movies', ActivitySchema);
