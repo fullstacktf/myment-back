@@ -23,24 +23,22 @@ export class ActivitiesMongoRepository {
     }
     
     public async addActivities(data:IdeaDTO){
-        //Check if exist
         if(await this.model.exists(data))
         return {error:'Data yet exist'}
-        
         return await this.model.create(data)
     }
     public async updateActivity(data: IdeaDTO) {
-        //Check if exist
         if(await this.model.exists(data))
         return {error:'Data yet exist'}
-        
-        
-        throw new Error("Method not implemented.");
+        return await this.model.update(data,"")
     }
     public async deleteActivities(data: IdeaDTO) {
-        throw new Error("Method not implemented.");
+        return this.model.deleteOne({data});
+    }
+    public async findByCategory(category:string){
+        return await this.model.find({"category":category})
     }
     public async findIdeas(type: string) {
-    return await this.model.find({"category":type},"ideas");
+        return await this.model.find({"category":type},"ideas");
     }
 }

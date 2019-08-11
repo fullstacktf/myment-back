@@ -6,38 +6,32 @@ const router: Router = Router();
 
 const controller = new ActivitiesController(new ActivitiesMongoRepository());
 
-router.post('/', (req, res) => {
+router.post('/all', (req, res) => {
     controller.handleAddRequest(req.body)
     .then( data => res.json(data) )
     .catch() 
 });
 
-router.get('/getAll',(req,res) => {
-    controller.handleRequest(req.body)
+router.post('/category', (req, res) => {
+    controller.handleCategoryRequests(req.body,'id')
     .then( data => res.json(data) )
     .catch()
-})
-
-router.get('/:id', (req, res) => {
-    controller.handleRequests(req.body,'id')
+});
+router.post('/ideas', (req, res) => {
+    controller.handleCategoryRequests(req.body,'id')
     .then( data => res.json(data) )
     .catch()
 });
 
-router.put('/:id', (req, res) => { 
+
+router.put('/:category:ideas', (req, res) => { 
     controller.handleUpdateRequest(req.body)
     .then( data => res.json(data) )
     .catch()
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:idea', (req, res) => {
     controller.handleDeleteRequest(req.body)
-    .then( data => res.json(data) )
-    .catch()
-});
-
-router.put('/like/:title', (req, res) => {
-    controller.handleLikeRequest(req.body)
     .then( data => res.json(data) )
     .catch()
 });

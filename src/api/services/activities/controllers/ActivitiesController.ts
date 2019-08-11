@@ -11,10 +11,13 @@ export class ActivitiesController {
     
     private parseInput(data: any): IdeaDTO {
         return {
-            title: data.title,
-            year: data.year,
-            genre: data.genre,
-            duration: data.duration,
+            location: {name:data.name,zone:data.zone},
+            name: data.name,
+            description: data.description,
+            coordinates: data.coordinates,
+            startTime:  data.startTime,
+            endTime: data.endTime,
+            link: data.link
         };
     }
     
@@ -24,7 +27,7 @@ export class ActivitiesController {
     }
     public handleRequest(req: Request){
         const data = this.parseInput(req);
-        return this.repo.showAll()
+        return this.repo.getAll()
     }
     public handleUpdateRequest(req: Request){
         const data = this.parseInput(req);
@@ -36,11 +39,13 @@ export class ActivitiesController {
         return this.repo.deleteActivities(data);
     }
     
-    public handleRequests(req: Request,type: string){
+    public handleCategoryRequests(req: Request,type: string){
         const data = this.parseInput(req);
-        return this.repo.findBy(type,data);
+        return this.repo.findByCategory(type);
     }
-    public async handleLikeRequest(req: Request) {
-        throw new Error("Method not implemented.");
+    public handleIdeasRequests(req: Request,type: string){
+        const data = this.parseInput(req);
+        return this.repo.findIdeas(type);
     }
+
 }

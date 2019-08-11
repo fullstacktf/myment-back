@@ -13,9 +13,15 @@ describe('ActivitiesRepository', () => {
     describe('showActivities', () => {
         test('should return all activities', () => {
             return repo.getAll().then(data => {
+                expect(data).toBe('')
             });
         });
-        test('should return only food',() => {
+        test('should return only food category',() => {
+            return repo.findByCategory('food').then(data =>{
+                expect(data).toBe('');
+            });
+        })
+        test('should return only food ideas',() => {
             return repo.findIdeas('food').then(data =>{
                 expect(data).toBe('');
             });
