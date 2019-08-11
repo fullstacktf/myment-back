@@ -40,7 +40,7 @@ export class ActivitiesMongoRepository {
     public async deleteActivities(data: IdeaDTO) {
         throw new Error("Method not implemented.");
     }
-    public async findBy(tiping: string) {
-        return await this.model.findOne({type:tiping});
+    public async findIdeas(type: string) {
+    return await this.model.find({"category":type},"ideas");
     }
 }

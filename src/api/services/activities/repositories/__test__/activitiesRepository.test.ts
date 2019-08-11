@@ -1,5 +1,5 @@
 import { ActivitiesMongoRepository as ActivitiesRepository } from '../ActivitiesRepository';
-
+import { mockData } from "../../../../../types/mockData";
 describe('ActivitiesRepository', () => {
     const repo = new ActivitiesRepository();
 
@@ -13,11 +13,10 @@ describe('ActivitiesRepository', () => {
     describe('showActivities', () => {
         test('should return all activities', () => {
             return repo.getAll().then(data => {
-                expect(data).toBe('');
             });
         });
         test('should return only food',() => {
-            return repo.findBy('food').then(data =>{
+            return repo.findIdeas('food').then(data =>{
                 expect(data).toBe('');
             });
         })
