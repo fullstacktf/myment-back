@@ -1,5 +1,5 @@
 import { ActivitiesMongoRepository as ActivitiesRepository } from '../ActivitiesRepository';
-import { mockData } from "../../../../../types/mockData";
+import { mockData } from "../../../../data/test/mockData";
 describe('ActivitiesRepository', () => {
     const repo = new ActivitiesRepository();
 
