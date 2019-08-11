@@ -7,18 +7,20 @@ const router: Router = Router();
 const controller = new ActivitiesController(new ActivitiesMongoRepository());
 
 router.post('/all', (req, res) => {
-    controller.handleAddRequest(req.body)
+    console.log("post",req.body)
+    controller.handleRequest(req.body)
     .then( data => res.json(data) )
     .catch() 
 });
 
 router.post('/category', (req, res) => {
-    controller.handleCategoryRequests(req.body,'id')
+    controller.handleCategoryRequests(req.body)
     .then( data => res.json(data) )
     .catch()
 });
 router.post('/ideas', (req, res) => {
-    controller.handleCategoryRequests(req.body,'id')
+    console.log("post",req.body)
+    controller.handleIdeasRequests(req.body)
     .then( data => res.json(data) )
     .catch()
 });

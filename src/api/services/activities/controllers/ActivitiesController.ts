@@ -20,13 +20,20 @@ export class ActivitiesController {
             link: data.link
         };
     }
+    private parseRequest(data:any): string{
+        return data.category
+    }
     
     public handleAddRequest(req: Request){
+        console.log("request",req)
         const data = this.parseInput(req);
+        console.log("data",data)
         return this.repo.addActivities(data)     
     }
     public handleRequest(req: Request){
+        console.log("request",req)
         const data = this.parseInput(req);
+        console.log("data",data)
         return this.repo.getAll()
     }
     public handleUpdateRequest(req: Request){
@@ -39,13 +46,18 @@ export class ActivitiesController {
         return this.repo.deleteActivities(data);
     }
     
-    public handleCategoryRequests(req: Request,type: string){
-        const data = this.parseInput(req);
-        return this.repo.findByCategory(type);
+    public handleCategoryRequests(req: Request){
+        console.log("request",req)
+        const category = this.parseRequest(req)
+        console.log("data",category)
+
+        return this.repo.findByCategory(category);
     }
-    public handleIdeasRequests(req: Request,type: string){
-        const data = this.parseInput(req);
-        return this.repo.findIdeas(type);
+    public handleIdeasRequests(req: Request){
+        console.log("request",req)
+        const category = this.parseRequest(req)
+        console.log("data",category)        
+        return this.repo.findIdeas(category);
     }
 
 }

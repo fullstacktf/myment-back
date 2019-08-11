@@ -4,7 +4,7 @@
   "description": "This repo contain the back API for the web application myment.",
   "main": "index.js",
   "scripts": {
-    "start": "npx ts-node server.js",
+    "start": "npx ts-node ./src/server.ts",
     "dev": "nodemon app.js",
     "test": "npx jest --forceExit --watch"
   },
