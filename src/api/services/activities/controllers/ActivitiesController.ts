@@ -53,13 +53,13 @@ export class ActivitiesController {
 
         return this.repo.findByCategory(category);
     }
-    public handleIdeasRequests(req: Request){
+    public async handleIdeasRequests(req: Request){
         console.log("request",req)
         const category = this.parseRequest(req)
         console.log("data",category)        
-        const ideas = this.repo.findIdeas(category);
+        const ideas = await this.repo.findIdeas(category)
         console.log("ideas",ideas)
-        return ideas.ideas
+        return ideas[0].get("ideas")
     }
 
 }
