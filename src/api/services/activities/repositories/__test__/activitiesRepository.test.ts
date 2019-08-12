@@ -1,5 +1,4 @@
 import { ActivitiesMongoRepository as ActivitiesRepository } from '../ActivitiesRepository';
-import { mockData } from "../../../../data/test/mockData";
 describe('ActivitiesRepository', () => {
     const repo = new ActivitiesRepository();
 
@@ -11,19 +10,19 @@ describe('ActivitiesRepository', () => {
         });
     });
     describe('showActivities', () => {
-        test('should return all activities', () => {
-            return repo.getAll().then(data => {
-                expect(data).toBe('')
-            });
-        });
-        test('should return only food category',() => {
-            return repo.findByCategory('food').then(data =>{
-                expect(data).toBe('');
-            });
-        })
+        // test('should return all activities', () => {
+        //     return repo.getAll().then(data => {
+        //         expect(data).toBe('')
+        //     });
+        // });
+        // test('should return only food category',() => {
+        //     return repo.findByCategory('food').then(data =>{
+        //         expect(data).toBe('');
+        //     });
+        // })
         test('should return only food ideas',() => {
             return repo.findIdeas('food').then(data =>{
-                expect(data).toBe('');
+                expect(data[0].get("ideas")).toBe('');
             });
         })
     });

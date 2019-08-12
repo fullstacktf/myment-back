@@ -57,7 +57,9 @@ export class ActivitiesController {
         console.log("request",req)
         const category = this.parseRequest(req)
         console.log("data",category)        
-        return this.repo.findIdeas(category);
+        const ideas = this.repo.findIdeas(category);
+        console.log("ideas",ideas)
+        return ideas.ideas
     }
 
 }

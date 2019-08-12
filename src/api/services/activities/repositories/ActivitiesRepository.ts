@@ -39,6 +39,7 @@ export class ActivitiesMongoRepository {
         return await this.model.find({"category":category})
     }
     public async findIdeas(type: string) {
-        return await this.model.find({"category":type},"ideas");
+        const ideas = this.model.find({"category":type},"ideas");
+        return await ideas
     }
 }
