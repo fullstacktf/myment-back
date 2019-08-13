@@ -1,6 +1,6 @@
 import { Activity } from '../../../data/mongodb/ActivityModel';
 import { SingleMongo } from '../../../data/mongodb/initMongo';
-import { IdeaDTO } from 'IdeaDTO';
+import { IdeaDTO } from '../../../../types/IdeaDTO';
 
 export class ActivitiesMongoRepository {
     

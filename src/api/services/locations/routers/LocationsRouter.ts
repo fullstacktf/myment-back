@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { LocationsController } from '../controllers/LocationsController';
-import { LocationsRepository } from '../repositories/LocationsRepository';
+import { LocationsMongoRepository as LocationsRepository } from '../repositories/LocationsRepository';
 
 const router: Router = Router();
 
@@ -12,13 +12,13 @@ router.post('/all', (req, res) => {
     .catch() 
 });
 
-router.post('/location', (req, res) => {
-    controller.handleLocationRequests(req.body,'id')
+router.post('/places', (req, res) => {
+    controller.handlePlacesRequest(req.body)
     .then( data => res.json(data) )
     .catch()
 });
-router.post('/city', (req, res) => {
-    controller.handleCategoryRequests(req.body,'id')
+router.post('/cities', (req, res) => {
+    controller.handleLocationRequests(req.body)
     .then( data => res.json(data) )
     .catch()
 });
@@ -40,4 +40,4 @@ router.delete('/zone', (req, res) => {
     .catch()
 });
 
-export const ActivitiesRouter: Router = router;
+export const LocationRouter: Router = router;

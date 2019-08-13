@@ -1,4 +1,4 @@
-import { ZoneDTO } from "ZoneDTO";
+import { ZoneDTO } from "../types/ZoneDTO";
 import { Feature } from "geojson";
 
 export interface CityDTO {
