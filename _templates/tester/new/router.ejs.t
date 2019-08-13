@@ -1,11 +1,5 @@
 ---
-<% if(locals.testing){ -%>
 to: <%= path %>/__test__/<%= name %>.test.ts
-to: <%= path %>/<%= name %>.ts
-
-<% }else{
-to: <%= path %>/<%= name %>.ts
-} -%>
 ---
 <%
  method = method.toUpperCase()

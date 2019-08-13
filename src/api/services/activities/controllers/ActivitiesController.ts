@@ -1,5 +1,5 @@
 import { ActivitiesMongoRepository as ActivitiesRepository } from '../repositories/ActivitiesRepository';
-import { IdeaDTO } from 'IdeaDTO';
+import { IdeaDTO } from '../../../../types/IdeaDTO';
 import { Request } from 'express'
 //TODO: Add the express types to handle req and req 
 export class ActivitiesController {
@@ -50,7 +50,6 @@ export class ActivitiesController {
         console.log("request",req)
         const category = this.parseRequest(req)
         console.log("data",category)
-
         return this.repo.findByCategory(category);
     }
     public async handleIdeasRequests(req: Request){
