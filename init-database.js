@@ -154,6 +154,47 @@ db.activities.insertMany([
         endTime: { hour: 11, minutes: 15 },
         link: 'http://...',
       },
+<<<<<<< HEAD
+      {
+        locations: {
+          name: 'Santa Cruz de Tenerife',
+          zone: 'Añaza',
+        },
+        name: 'Guachinche Ivan',
+        description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+        coordinates: {
+          type: 'Feature',
+          properties: {},
+          geometry: {
+            type: 'Point',
+            coordinates: [-16.318302154541016, 28.481819102847485],
+          },
+        },
+        startTime: [9, 0],
+        endTime: [11, 0],
+        link: 'http://...',
+      },
+      {
+        locations: {
+          name: 'Santa Cruz de Tenerife',
+          zone: 'Añaza',
+        },
+        name: 'Guachinche Ivan',
+        description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+        coordinates: {
+          type: 'Feature',
+          properties: {},
+          geometry: {
+            type: 'Point',
+            coordinates: [-16.318302154541016, 28.481819102847485],
+          },
+        },
+        startTime: [9, 0],
+        endTime: [11, 0],
+        link: 'http://...',
+      },
+=======
+>>>>>>> 1729016fb170c6f044a1e29097c083adbd9e7ec2
     ],
   },
   {
