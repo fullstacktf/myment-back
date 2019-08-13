@@ -15,5 +15,16 @@ describe('LocationController', () => {
                 expect(data).toBe(1);
             });
         });
+        test('Check Connection to Database', () => {
+            const mockRequest: any = {
+                get: jest.fn((name) => {
+                    return 'hola'
+                })
+            }
+            return controller.handleRequest(mockRequest)
+            .then(data => {
+                expect(data).toBe(1);
+            });
+        });
     });
 });

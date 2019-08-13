@@ -21,7 +21,7 @@ describe('TagsRepository', () => {
             });
         })
         test('should return only Category Tags',() => {
-            return repo.findByCategory('leisure').then(data =>{
+            return repo.findByCategory('food').then(data =>{
                 expect(data).toBe('');
             });
         })

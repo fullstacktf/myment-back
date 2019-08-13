@@ -4,11 +4,11 @@ import bodyParser from 'body-parser';
 
 const app: express.Application = express();
 
-import { usersRouter } from './api/services/auth/routers/usersRouter';
+//import { usersRouter } from './api/services/auth/routers/usersRouter';
 import { ActivitiesRouter } from './api/services/activities/routers/ActivitiesRouter';
 import { TagsRouter } from './api/services/tags/routers/tagsRouter';
 import { LocationRouter } from './api/services/locations/routers/LocationsRouter'
-import handleErrors from './api/middleware/handleErrors';
+//import handleErrors from './api/middleware/handleErrors';
 import allCORS from './api/middleware/allCORS'
 
 //Add Middlewares
@@ -20,7 +20,7 @@ app.use(bodyParser.json())
 //app.use('/users', usersRouter);
 app.use('/activities', ActivitiesRouter);
 app.use('/locations',LocationRouter)
-//app.use('/tags', TagsRouter);
+app.use('/tags', TagsRouter);
 
 /*
 he web process must listen for HTTP traffic on $PORT,

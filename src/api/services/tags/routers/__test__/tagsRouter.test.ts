@@ -14,5 +14,17 @@ describe('tagsRouter',()=>{
         .set('Origin', 'http://localhost:3000')
         
         expect(res.status).toBe(200);
+        expect(res.body).toBe('')
+    });
+    test('POST /category empty',async  () =>{
+        const mockUserData = {"category":"food"}
+        
+        const res = await httpRequest.post('/tags/category')
+        .send(mockUserData)
+        .set('Accept', 'application/json')
+        .set('Origin', 'http://localhost:3000')
+        
+        expect(res.status).toBe(200);
+        expect(res.body).toBe('')
     });
 })
