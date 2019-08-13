@@ -154,7 +154,6 @@ db.activities.insertMany([
         endTime: { hour: 11, minutes: 15 },
         link: 'http://...',
       },
-<<<<<<< HEAD
       {
         locations: {
           name: 'Santa Cruz de Tenerife',
@@ -193,8 +192,6 @@ db.activities.insertMany([
         endTime: [11, 0],
         link: 'http://...',
       },
-=======
->>>>>>> 1729016fb170c6f044a1e29097c083adbd9e7ec2
     ],
   },
   {
