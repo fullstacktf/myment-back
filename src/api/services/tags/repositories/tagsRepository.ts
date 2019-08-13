@@ -1,18 +1,21 @@
 import { TagModel } from '../../../data/mongodb/TagModel';
 import { SingleMongo } from '../../../data/mongodb/initMongo';
-import { TagDTO } from 'TagDTO';
+import { TagDTO } from '../../../../types/TagDTO';
 
-export class TagsRepository{
+export class TagsMongoRepository{
 
     private con: SingleMongo;
     private model = TagModel;
     
     public constructor() {
-        this.con = new SingleMongo('127.0.0.1', 'tags');
+        this.con = new SingleMongo('127.0.0.1','wizard','1234','myment');
         this.con.connection.on('error', console.error.bind(console, 'connection error:'));
         this.con.connection.once('open', function() {
             console.log('We are connected');
         });
+    }
+    public async getConnection() {
+        return await this.con.connection;
     }
     public async showAll(){
         return await this.model.find({})
@@ -35,22 +38,7 @@ export class TagsRepository{
     public async deleteTag(data: TagDTO) {
         throw new Error("Method not implemented.");
     }
-    public async findBy(type: string, data: TagDTO) {        
-        // Partial text search using mongoDB regex
-        this.model.find(
-            {
-            storeName: {
-                $regex: new RegExp(q),
-            },
-            },
-            {
-                _id: 0,
-                __v: 0,
-            },
-            function(err, data) {
-                res.json(data);
-            },
-        )
-        .limit(10);
+    public async findByCategory(category:any) {    
+        return await this.model.where("category",category)  
     }
 }

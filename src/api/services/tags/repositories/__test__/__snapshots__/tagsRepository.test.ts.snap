@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagsRepository showLocations should return only Place España 1`] = `
+Array [
+  Object {
+    "_id": "5d52e3b3727816af15e6de1a",
+    "category": Array [
+      "leisure",
+      "lodging",
+    ],
+    "name": "Bonito",
+  },
+  Object {
+    "_id": "5d52e3b3727816af15e6de1b",
+    "category": Array [
+      "food",
+    ],
+    "name": "Rico",
+  },
+  Object {
+    "_id": "5d52e3b3727816af15e6de1c",
+    "category": Array [
+      "food",
+    ],
+    "name": "Sabroso",
+  },
+  Object {
+    "_id": "5d52e3b3727816af15e6de1d",
+    "category": Array [
+      "leisure",
+    ],
+    "name": "Aventura",
+  },
+  Object {
+    "_id": "5d52e3b3727816af15e6de1e",
+    "category": Array [
+      "leisure",
+    ],
+    "name": "Extremo",
+  },
+  Object {
+    "_id": "5d52e3b3727816af15e6de1f",
+    "category": Array [
+      "leisure",
+      "lodging",
+    ],
+    "name": "Tranquilo",
+  },
+  Object {
+    "_id": "5d52e3b3727816af15e6de20",
+    "category": Array [
+      "lodging",
+    ],
+    "name": "Cuidado",
+  },
+  Object {
+    "_id": "5d52e3b3727816af15e6de21",
+    "category": Array [
+      "leisure",
+      "lodging",
+    ],
+    "name": "Bonito",
+  },
+]
+`;

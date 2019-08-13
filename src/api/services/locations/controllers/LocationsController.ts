@@ -55,12 +55,12 @@ export class LocationsController {
     
     public async handlePlacesRequest(body: any) {
         const [country1,country2] = await this.repo.findPlaces();
-        const data = country1.cities.map(item => {
-            const names =  item.name
-            const zones = item.zone
-            return {country:country1.country,city:names,zone:zones}
+        const cityName = country1.cities.map(item => {
+            const name =  item.name
+            const zones = item.zone.map(item => item.name)
+            return {name,zones}
         })
-        return data
+        return {country:country1.country,cities:cityName}
 
     }
     public async handleLocationRequests(req: Request,){
