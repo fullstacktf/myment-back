@@ -42,10 +42,11 @@ export class ActivitiesController {
         async function getData(i,repo){
             return await repo.findByLocation(data.country,data.city,data.zone,data.tags[i])
         }
-        const result = []
-        for(var i = 0; i< data.tags.length;i++)
+        const result= []
+        for(var i = 0; i< data.tags.length;i++){
             result.push( await getData(i,this.repo))
-        return await result
+        }
+        return await [].concat(...result)
     }
     public handleAddRequest(req: Request){
         const data = this.parseInput(req);

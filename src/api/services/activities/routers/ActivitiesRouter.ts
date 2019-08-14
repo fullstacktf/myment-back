@@ -26,7 +26,9 @@ router.post('/ideas', (req, res) => {
 router.post('/find', (req, res) => {
     console.log("post",req.body)
     controller.handleFindRequests(req.body)
-    .then( data => res.json(data) )
+    .then( data => {
+        res.json(data)
+     })
     .catch()
 });
 
