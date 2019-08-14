@@ -4,13 +4,23 @@ import { IdeaDTO } from '../../../types/IdeaDTO';
 export interface ActivityModel extends IdeaDTO, Document {
     searchNear(): string[]
 }
+
+export const LocSchema:Schema = new Schema({
+    country:String,
+    city:String,
+    zone:String
+})
+
 export const ActivitySchema: Schema = new Schema({
-    location: Schema.Types.Mixed,
+    locations: LocSchema,
+    category:String,
+    color:String,
     name: String,
     description: String,
-    coordinates: Schema.Types.Mixed,
-    startTime:  [Number],
-    endTime: [Number],
+    loc: {type:String,coordinates:[Number,Number]},
+    startTime:  {hour:Number,minutes:Number},
+    endTime: {hour:Number,minutes:Number},
+    tags:Array,
     link: String
 });
 

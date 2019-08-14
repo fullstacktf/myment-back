@@ -9,256 +9,229 @@ db.activities.insertMany([
   {
     category: 'lodging',
     color: 'orange',
-    ideas: [
-      {
-        locations: {
-          country: 'España',
-          city: 'Santa Cruz de Tenerife',
-          zone: 'Llano del Moro',
-        },
-        name: 'Casa Domi',
-        description: 'Buen sitio para descansar y echarte un sueño',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: {
-          hour: 9,
-          minutes: 0,
-        },
-        endTime: {
-          hour: 15,
-          minutes: 0,
-        },
-        link: 'http://...',
-      },
-      {
-        locations: {
-          country: 'España',
-          city: 'Santa Cruz de Tenerife',
-          zone: 'Añaza',
-        },
-        name: 'Casa Añaza',
-        description: 'Buen sitio para descansar y echarte un sueño',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: {
-          hour: 9,
-          minutes: 0,
-        },
-        endTime: {
-          hour: 15,
-          minutes: 0,
-        },
-        link: 'http://...',
-      },
-      {
-        locations: {
-          country: 'España',
-          city: 'Santa Cruz de Tenerife',
-          zone: 'La Gallega',
-        },
-        name: 'Casa Gallega',
-        description: 'Buen sitio para descansar y echarte un sueño',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: {
-          hour: 9,
-          minutes: 0,
-        },
-        endTime: {
-          hour: 15,
-          minutes: 0,
-        },
-        link: 'http://...',
-      },
-    ],
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'Plaza',
+    },
+    name: 'Casa Domi',
+    description: 'Buen sitio para descansar y echarte un sueño',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: {
+      hour: 9,
+      minutes: 0,
+    },
+    endTime: {
+      hour: 15,
+      minutes: 0,
+    },
+    link: 'http://...',
+    tags: ['Rural'],
+  },
+  {
+    category: 'lodging',
+    color: 'orange',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'Añaza',
+    },
+    name: 'Casa Añaza',
+    description: 'Buen sitio para descansar y echarte un sueño',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: {
+      hour: 9,
+      minutes: 0,
+    },
+    endTime: {
+      hour: 15,
+      minutes: 0,
+    },
+    link: 'http://...',
+    tags: ['Relax'],
+  },
+  {
+    category: 'lodging',
+    color: 'orange',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'La Gallega',
+    },
+    name: 'Casa Gallega',
+    description: 'Buen sitio para descansar y echarte un sueño',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: {
+      hour: 9,
+      minutes: 0,
+    },
+    endTime: {
+      hour: 15,
+      minutes: 0,
+    },
+    link: 'http://...',
+    tags: ['Tranquilo'],
   },
   {
     category: 'food',
     color: 'green',
-    ideas: [
-      {
-        locations: {
-          country: 'España',
-          name: 'Santa Cruz de Tenerife',
-          zone: 'Añaza',
-        },
-        name: 'Guachinche Ivan',
-        description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: { hour: 9, minutes: 0 },
-        endTime: { hour: 11, minutes: 15 },
-        link: 'http://...',
-      },
-      {
-        locations: {
-          country: 'España',
-          name: 'Santa Cruz de Tenerife',
-          zone: 'Añaza',
-        },
-        name: 'Guachinche Añaza',
-        description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: { hour: 9, minutes: 0 },
-        endTime: { hour: 11, minutes: 15 },
-        link: 'http://...',
-      },
-      {
-        locations: {
-          country: 'España',
-          name: 'Santa Cruz de Tenerife',
-          zone: 'La Gallega',
-        },
-        name: 'Guachinche Gallega',
-        description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: { hour: 9, minutes: 0 },
-        endTime: { hour: 11, minutes: 15 },
-        link: 'http://...',
-      },
-      {
-        locations: {
-          name: 'Santa Cruz de Tenerife',
-          zone: 'Añaza',
-        },
-        name: 'Guachinche Ivan',
-        description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: [9, 0],
-        endTime: [11, 0],
-        link: 'http://...',
-      },
-      {
-        locations: {
-          name: 'Santa Cruz de Tenerife',
-          zone: 'Añaza',
-        },
-        name: 'Guachinche Ivan',
-        description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: [9, 0],
-        endTime: [11, 0],
-        link: 'http://...',
-      },
-    ],
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'Añaza',
+    },
+    name: 'Meson Lord',
+    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: { hour: 9, minutes: 0 },
+    endTime: { hour: 11, minutes: 15 },
+    link: 'http://...',
+    tags: ['Carnes'],
+  },
+  {
+    category: 'food',
+    color: 'green',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'Añaza',
+    },
+    name: 'Guachinche Añaza',
+    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: { hour: 9, minutes: 0 },
+    endTime: { hour: 11, minutes: 15 },
+    link: 'http://...',
+    tags: ['Carnes'],
+  },
+  {
+    category: 'food',
+    color: 'green',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'La Gallega',
+    },
+    name: 'Guachinche Gallega',
+    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: { hour: 9, minutes: 0 },
+    endTime: { hour: 11, minutes: 15 },
+    link: 'http://...',
+    tags: ['Pescado'],
+  },
+  {
+    category: 'food',
+    color: 'green',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'Añaza',
+    },
+    name: 'Pizza Izan',
+    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: [9, 0],
+    endTime: [11, 0],
+    link: 'http://...',
+    tags: ['Pizzería'],
+  },
+  {
+    category: 'food',
+    color: 'green',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'Añaza',
+    },
+    name: 'Guachinche Ivan',
+    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: [9, 0],
+    endTime: [11, 0],
+    link: 'http://...',
+    tags: ['Comida rápida'],
   },
   {
     category: 'leisure',
     color: 'violet',
-    ideas: [
-      {
-        locations: {
-          country: 'España',
-          name: 'Santa Cruz de Tenerife',
-          zone: 'La Añaza',
-        },
-        name: 'Añaza Cinema',
-        description: 'Go to the cinema and enjoy movies',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: { hour: 15, minutes: 0 },
-        endTime: { hour: 16, minutes: 0 },
-        link: 'http://...',
-      },
-      {
-        locations: {
-          country: 'España',
-          name: 'Santa Cruz de Tenerife',
-          zone: 'La Gallega',
-        },
-        name: 'Cinema Gallega',
-        description: 'Go to the cinema and enjoy movies',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: { hour: 15, minutes: 0 },
-        endTime: { hour: 16, minutes: 0 },
-        link: 'http://...',
-      },
-      {
-        locations: {
-          country: 'España',
-          name: 'Santa Cruz de Tenerife',
-          zone: 'Llano del Moro',
-        },
-        name: 'Moro Cinema',
-        description: 'Go to the cinema and enjoy movies',
-        coordinates: {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Point',
-            coordinates: [-16.318302154541016, 28.481819102847485],
-          },
-        },
-        startTime: { hour: 15, minutes: 0 },
-        endTime: { hour: 16, minutes: 0 },
-        link: 'http://...',
-      },
-    ],
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'La Añaza',
+    },
+    name: 'Añaza Cinema',
+    description: 'Go to the cinema and enjoy movies',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: { hour: 15, minutes: 0 },
+    endTime: { hour: 16, minutes: 0 },
+    link: 'http://...',
+    tags: ['Urbano'],
+  },
+  {
+    category: 'leisure',
+    color: 'violet',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'La Gallega',
+    },
+    name: 'Cinema Gallega',
+    description: 'Go to the cinema and enjoy movies',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: { hour: 15, minutes: 0 },
+    endTime: { hour: 16, minutes: 0 },
+    link: 'http://...',
+    tags: ['Tiendas'],
+  },
+  {
+    category: 'leisure',
+    color: 'violet',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'Plaza',
+    },
+    name: 'Moro Cinema',
+    description: 'Go to the cinema and enjoy movies',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: { hour: 15, minutes: 0 },
+    endTime: { hour: 16, minutes: 0 },
+    link: 'http://...',
+    tags: ['Fiesta'],
   },
 ]);
 db.createCollection('locations');
@@ -329,7 +302,7 @@ db.locations.insertMany([
             },
           },
           {
-            name: 'Llano del Moro',
+            name: 'Plaza',
             loc: {
               type: 'Polygon',
               coordinates: [
@@ -505,15 +478,75 @@ db.createCollection('tags');
 
 db.tags.insertMany([
   {
-    name: 'Precioso',
+    name: 'Urbano',
     category: ['leisure'],
   },
   {
-    name: 'Rico',
+    name: 'Fiesta',
+    category: ['leisure'],
+  },
+  {
+    name: 'Manga',
+    category: ['leisure'],
+  },
+  {
+    name: 'Tiendas',
+    category: ['leisure'],
+  },
+  {
+    name: 'Deportes',
+    category: ['leisure'],
+  },
+  {
+    name: 'Moda',
+    category: ['leisure'],
+  },
+  {
+    name: 'Parques',
+    category: ['leisure'],
+  },
+  {
+    name: 'Musica',
+    category: ['leisure'],
+  },
+  {
+    name: 'Carne',
     category: ['food'],
   },
   {
-    name: 'Sabroso',
+    name: 'Bufet',
+    category: ['food'],
+  },
+  {
+    name: 'Vegetariano',
+    category: ['food'],
+  },
+  {
+    name: 'Vegano',
+    category: ['food'],
+  },
+  {
+    name: 'Wok',
+    category: ['food'],
+  },
+  {
+    name: 'Mexicano',
+    category: ['food'],
+  },
+  {
+    name: 'Asiático',
+    category: ['food'],
+  },
+  {
+    name: 'Pescado',
+    category: ['food'],
+  },
+  {
+    name: 'Comida rápida',
+    category: ['food'],
+  },
+  {
+    name: 'Pizzería',
     category: ['food'],
   },
   {
@@ -529,11 +562,43 @@ db.tags.insertMany([
     category: ['lodging'],
   },
   {
-    name: 'Cuidado',
+    name: 'Céntrico',
     category: ['lodging'],
   },
   {
-    name: 'Bonito',
+    name: 'Piso',
+    category: ['lodging'],
+  },
+  {
+    name: 'Relax',
+    category: ['lodging'],
+  },
+  {
+    name: 'Rural',
+    category: ['lodging'],
+  },
+  {
+    name: 'Urbano',
+    category: ['lodging'],
+  },
+  {
+    name: 'Deluxe',
+    category: ['lodging'],
+  },
+  {
+    name: 'Apartamento',
+    category: ['lodging'],
+  },
+  {
+    name: 'Hotel',
+    category: ['lodging'],
+  },
+  {
+    name: 'Caro',
+    category: ['lodging'],
+  },
+  {
+    name: 'familiar',
     category: ['lodging'],
   },
 ]);

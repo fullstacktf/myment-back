@@ -1,6 +1,7 @@
-import { Activity } from '../../../data/mongodb/ActivityModel';
+import { Activity, ActivitySchema } from '../../../data/mongodb/ActivityModel';
 import { SingleMongo } from '../../../data/mongodb/initMongo';
 import { IdeaDTO } from '../../../../types/IdeaDTO';
+import { Query } from 'mongoose';
 
 export class ActivitiesMongoRepository {
     
@@ -19,9 +20,21 @@ export class ActivitiesMongoRepository {
     }
     
     public async getAll() {
-        return await this.model.find({}).limit(10);
+        return await this.model.find({})
+        //.where('ideas.locations.country','España')
+        //.where('ideas.locations.city','Santa Cruz de Tenerife')
+        //.find({locations.tags: {$in:'Fiesta'}});
     }
     
+    public async findByLocation(country:string,city:string,zone:string,tags:string){
+        const data = this.model
+        .where('locations.country',country)
+        .where('locations.city',city)
+        .where('locations.zone',zone)
+        .where('tags').in([tags])
+        return data
+    }
+
     public async addActivities(data:IdeaDTO){
         if(await this.model.exists(data))
         return {error:'Data yet exist'}
@@ -38,7 +51,7 @@ export class ActivitiesMongoRepository {
     public async findByCategory(category:string){
         return await this.model.find({"category":category})
     }
-    public async findIdeas(type: string) {
+    public async findByCategoryIdeas(type: string) {
         const ideas = this.model.find({"category":type},"ideas");
         return await ideas
     }
