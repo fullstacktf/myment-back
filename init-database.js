@@ -505,8 +505,8 @@ db.createCollection('tags');
 
 db.tags.insertMany([
   {
-    name: 'Bonito',
-    category: ['leisure', 'lodging'],
+    name: 'Precioso',
+    category: ['leisure'],
   },
   {
     name: 'Rico',
@@ -526,7 +526,7 @@ db.tags.insertMany([
   },
   {
     name: 'Tranquilo',
-    category: ['leisure', 'lodging'],
+    category: ['lodging'],
   },
   {
     name: 'Cuidado',
@@ -534,6 +534,6 @@ db.tags.insertMany([
   },
   {
     name: 'Bonito',
-    category: ['leisure', 'lodging'],
+    category: ['lodging'],
   },
 ]);

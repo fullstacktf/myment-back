@@ -25,10 +25,11 @@ export class TagsController{
         const data = this.parseInput(req);
         return this.repo.showAll()
     }
-    public handleCategoryRequest(req: Request){
+    public async handleCategoryRequest(req: Request){
         const data = this.parseCategory(req);
-        console.log(data)
-        return this.repo.findByCategory(data.category)     
+        const tags = await this.repo.findByCategory(data.category)  
+        const names = tags.map(item => item.name) 
+        return names
     }
     public handleSearchRequest(req:Request){
         const data = this.parseInput(req);
