@@ -37,6 +37,31 @@ db.activities.insertMany([
     locations: {
       country: 'España',
       city: 'Santa Cruz de Tenerife',
+      zone: 'La Gallega',
+    },
+    name: 'Hostal Patri',
+    description: 'Trato casero del tipico hogar canario, muy recomendable para todos los públicos',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: {
+      hour: 9,
+      minutes: 30,
+    },
+    endTime: {
+      hour: 12,
+      minutes: 0,
+    },
+    link: 'http://...',
+    tags: ['Relax'],
+  },
+  {
+    category: 'lodging',
+    color: 'orange',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
       zone: 'Añaza',
     },
     name: 'Casa Añaza',
@@ -54,7 +79,7 @@ db.activities.insertMany([
       minutes: 0,
     },
     link: 'http://...',
-    tags: ['Relax'],
+    tags: ['Centro'],
   },
   {
     category: 'lodging',
@@ -81,6 +106,32 @@ db.activities.insertMany([
     link: 'http://...',
     tags: ['Tranquilo'],
   },
+
+  {
+    category: 'lodging',
+    color: 'orange',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
+      zone: 'La Gallega',
+    },
+    name: 'Mansión Tabío',
+    description: 'Extravagante vivienda vacacional al gusto de la época clásica canaria',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: {
+      hour: 9,
+      minutes: 0,
+    },
+    endTime: {
+      hour: 15,
+      minutes: 0,
+    },
+    link: 'http://...',
+    tags: ['Deluxe'],
+  },
   {
     category: 'food',
     color: 'green',
@@ -90,7 +141,7 @@ db.activities.insertMany([
       zone: 'Añaza',
     },
     name: 'Meson Lord',
-    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+    description: 'Gran tasca de comida tradicional y asados',
     loc: {
       type: 'Point',
       coordinates: [-16.318302154541016, 28.481819102847485],
@@ -98,7 +149,7 @@ db.activities.insertMany([
     startTime: { hour: 9, minutes: 0 },
     endTime: { hour: 11, minutes: 15 },
     link: 'http://...',
-    tags: ['Carnes'],
+    tags: ['Carne'],
   },
   {
     category: 'food',
@@ -109,26 +160,7 @@ db.activities.insertMany([
       zone: 'Añaza',
     },
     name: 'Guachinche Añaza',
-    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
-    loc: {
-      type: 'Point',
-      coordinates: [-16.318302154541016, 28.481819102847485],
-    },
-    startTime: { hour: 9, minutes: 0 },
-    endTime: { hour: 11, minutes: 15 },
-    link: 'http://...',
-    tags: ['Carnes'],
-  },
-  {
-    category: 'food',
-    color: 'green',
-    locations: {
-      country: 'España',
-      city: 'Santa Cruz de Tenerife',
-      zone: 'La Gallega',
-    },
-    name: 'Guachinche Gallega',
-    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+    description: 'Go to Guachinche Añaza and try the best fresh fish ',
     loc: {
       type: 'Point',
       coordinates: [-16.318302154541016, 28.481819102847485],
@@ -144,10 +176,29 @@ db.activities.insertMany([
     locations: {
       country: 'España',
       city: 'Santa Cruz de Tenerife',
+      zone: 'La Gallega',
+    },
+    name: 'Bufet Gallega',
+    description: 'Go to this bufet and try its homemade food',
+    loc: {
+      type: 'Point',
+      coordinates: [-16.318302154541016, 28.481819102847485],
+    },
+    startTime: { hour: 12, minutes: 45 },
+    endTime: { hour: 14, minutes: 30 },
+    link: 'http://...',
+    tags: ['Bufet'],
+  },
+  {
+    category: 'food',
+    color: 'green',
+    locations: {
+      country: 'España',
+      city: 'Santa Cruz de Tenerife',
       zone: 'Añaza',
     },
     name: 'Pizza Izan',
-    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+    description: 'Try the best pear fiochi on pizzería Izan, true marvellous and delicious italian food',
     loc: {
       type: 'Point',
       coordinates: [-16.318302154541016, 28.481819102847485],
@@ -165,8 +216,8 @@ db.activities.insertMany([
       city: 'Santa Cruz de Tenerife',
       zone: 'Añaza',
     },
-    name: 'Guachinche Ivan',
-    description: 'Go to Guachinche Ivan in La Laguna and take a rabbit',
+    name: 'Burguer Ivan',
+    description: 'Go to Ivans and enjoy your best meal',
     loc: {
       type: 'Point',
       coordinates: [-16.318302154541016, 28.481819102847485],
@@ -182,10 +233,10 @@ db.activities.insertMany([
     locations: {
       country: 'España',
       city: 'Santa Cruz de Tenerife',
-      zone: 'La Añaza',
+      zone: 'Añaza',
     },
-    name: 'Añaza Cinema',
-    description: 'Go to the cinema and enjoy movies',
+    name: 'Skate Park Añaxza',
+    description: 'Try out the new skatepark in Añaza',
     loc: {
       type: 'Point',
       coordinates: [-16.318302154541016, 28.481819102847485],
@@ -203,8 +254,8 @@ db.activities.insertMany([
       city: 'Santa Cruz de Tenerife',
       zone: 'La Gallega',
     },
-    name: 'Cinema Gallega',
-    description: 'Go to the cinema and enjoy movies',
+    name: 'Meridiano Mall',
+    description: 'Enjoy all the new stands and stores at this centric mall',
     loc: {
       type: 'Point',
       coordinates: [-16.318302154541016, 28.481819102847485],
@@ -222,8 +273,8 @@ db.activities.insertMany([
       city: 'Santa Cruz de Tenerife',
       zone: 'Plaza',
     },
-    name: 'Moro Cinema',
-    description: 'Go to the cinema and enjoy movies',
+    name: 'City Disco',
+    description: 'Try a new urban and chick disco on the centre of Santa Cruz',
     loc: {
       type: 'Point',
       coordinates: [-16.318302154541016, 28.481819102847485],
