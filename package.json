@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/fullstacktf/myment-back#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^3.1.0",
     "mariadb": "^2.1.0",
     "mongoose": "^5.6.7",
